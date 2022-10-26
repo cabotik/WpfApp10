@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfApp10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp10"
+        mc:Ignorable="d"
+        FontFamily="Comic Sams ms"
+        Title="Authorization Window" MinHeight="450" MinWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Margin="5" Content="Enter login"/>
+            <TextBox Margin="5" Name="tbLogin"/>
+            <Label Content="Enter password" Margin="5"/>
+            <PasswordBox Margin="5" Name="pbPassword"/>
+            <Button Content="Enter" Name="btnInput" Click="btnInput_Click" Margin="5" Background="#498c51"/>
+            <Button Content="Enter without authorization" Background="#498c51" Name="btnInputWithoutAutho" Click="btnInputWithoutAutho_Click" Margin="5"/>
+        </StackPanel>
+        <StackPanel x:Name="spCaptcha" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
+            <Label Content="Enter captcha" Margin="5"/>
+            <Image Height="80" Width="80" Name="ImageCaptcha"/>
+            <TextBox Margin="5" Name="tbCaptcha"/>
+            <Button Name="btnRefreah" Margin="5" Click="btnRefreah_Click" Content="Refreash" Background="#498c51"/>
+        </StackPanel>
+    </Grid>
+</Window>

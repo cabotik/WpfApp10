@@ -112,26 +112,24 @@ namespace WpfApp10
                 if (myContext.users.Any(x => x.Login == tbLogin.Text && x.Password == pbPassword.Password))
                 {
                     var user = myContext.users.SingleOrDefault(x => x.Login == tbLogin.Text && x.Password == pbPassword.Password);
-                   
-
                     switch (user.Account)
                     {
                         case "admin":
-                            MessageBox.Show($"{user.Name}-добро пожаловать в систему");
+                            MessageBox.Show($"{user.Name}, welcome to system");
                             UsersForms.AdminWindow adminWindow = new UsersForms.AdminWindow();
                             adminWindow.Show();
                             Close();
                             break;
 
                         case "client":
-                            MessageBox.Show($"{user.Name}-добро пожаловать в систему");
+                            MessageBox.Show($"{user.Name}, welcome to system");
                             UsersForms.ClientWindow clientWindow = new UsersForms.ClientWindow();
                             clientWindow.Show();
                             Close();
                             break;
 
                         case "maneger":
-                            MessageBox.Show($"{user.Name}-добро пожаловать в систему");
+                            MessageBox.Show($"{user.Name}, welcome to system");
                             UsersForms.ManagerWindow managerWindow = new UsersForms.ManagerWindow();
                             managerWindow.Show();
                             Close();
@@ -140,8 +138,10 @@ namespace WpfApp10
                 }
                 else
                 {
-                    MessageBox.Show("Пользователь не найден");
-                    return;
+                    MessageBox.Show("User dont found of inccorect data. Enter captcha.");
+                    spCaptcha.Visibility = Visibility.Visible;
+                    IncorrectAutho();
+                    
                 }
 
             }

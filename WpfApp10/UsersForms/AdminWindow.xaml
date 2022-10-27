@@ -8,6 +8,28 @@
         FontFamily="Comic Sans ms"
         Title="Admin Window" MinHeight="450" MinWidth="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <TextBlock Margin="5"  Name="tbUserName"/>
+        </StackPanel>
+        <StackPanel Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Margin="5" Content="Operations with product"/>
+            <Button Margin="5" Content="Add product" Background="Green" Name="btnAddProduct" Click="btnAddProduct_Click"/>
+            <Button Margin="5" Content="Change product" Background="Green" Name="btnChangeProduct" Click="btnChangeProduct_Click"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
+            <Label Content="Operations with orders" Margin="5"/>
+            <Button Content="Make an order" Name="btnMakeAnOrder" Click="btnMakeAnOrder_Click" Background="Green" Margin="5"/>
+            <Button Margin="5" Content="Change an order" Name="btnChangeAnOrder" Click="btnChangeAnOrder_Click" Background="Green"/>
+            
+        </StackPanel>
+        <StackPanel Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Margin="5" Name="btnViewproductList" Click="btnViewproductList_Click" Content="View list of the product" Background="Green"/>
+            <Button Margin="5" Name="btnBack" Click="btnBack_Click" Content="Back to authorization" Background="Green"/>
+        </StackPanel>
     </Grid>
 </Window>

@@ -22,6 +22,52 @@ namespace WpfApp10.UsersForms
         public AdminWindow()
         {
             InitializeComponent();
+
+            DB.User user = new DB.User();
+            tbUserName.Text = user.Name;
+            
+        }
+
+        private void btnAddProduct_Click(object sender, RoutedEventArgs e)
+        {
+            ToolsForms.AddProductWindow addProductWindow = new ToolsForms.AddProductWindow();
+            addProductWindow.Show();
+            Close();
+        }
+
+        private void btnChangeProduct_Click(object sender, RoutedEventArgs e)
+        {
+            ToolsForms.ChangeProductWindow changeProductWindow = new ToolsForms.ChangeProductWindow();
+            changeProductWindow.Show();
+            Close();
+        }
+
+        private void btnMakeAnOrder_Click(object sender, RoutedEventArgs e)
+        {
+            ToolsForms.MakeOrderWindow makeOrderWindow = new ToolsForms.MakeOrderWindow();
+            makeOrderWindow.Show();
+            Close();
+        }
+
+        private void btnChangeAnOrder_Click(object sender, RoutedEventArgs e)
+        {
+            ToolsForms.ChangeAnOrderWindow changeAnOrderWindow = new ToolsForms.ChangeAnOrderWindow();
+            changeAnOrderWindow.Show();
+            Close();
+        }
+
+        private void btnViewproductList_Click(object sender, RoutedEventArgs e)
+        {
+            ToolsForms.ProductListWindow productListWindow = new ToolsForms.ProductListWindow();
+            productListWindow.Show();
+            Close();
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            Close();
         }
     }
 }

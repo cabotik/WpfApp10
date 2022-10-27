@@ -9,7 +9,7 @@ namespace WpfApp10.DB
 {
     public class MyContext : DbContext
     {
-        private string cs = "server = 192.168.162.169; database =test25_10test; user id =sa; password =sa";
+        private string cs = "server = 192.168.162.169; database =test27_10test; user id =sa; password =sa";
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(cs);

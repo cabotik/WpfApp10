@@ -22,6 +22,18 @@ namespace WpfApp10.ToolsForms
         public ProductListWindow()
         {
             InitializeComponent();
+            this.Loaded += ProductListWindow_Loaded;
+        }
+
+        private void ProductListWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                DB.Product product = new DB.Product();
+                listproduct.Items.Add(product);
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
         }
     }
 }

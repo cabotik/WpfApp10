@@ -9,8 +9,8 @@ using WpfApp10.DB;
 namespace WpfApp10.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20221025150742_1q")]
-    partial class _1q
+    [Migration("20221027191520_1")]
+    partial class _1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

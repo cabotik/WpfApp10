@@ -7,6 +7,32 @@
         mc:Ignorable="d"
         Title="ProductListWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="390"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="27*"/>
+        </Grid.RowDefinitions>
+        <ListBox Name="listproduct" Grid.Row="1" Grid.Column="1">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Name="ImageTest" Source="{Binding Image}"/>
+                        <StackPanel  HorizontalAlignment="Center">
+                            <Label Name ="lProductName" Content="{Binding ProductName}"/>
+                            <Label Name ="lProductDescription" Content="{Binding Description}"/>
+                            <Label Name="lManufacture" Content="{Binding Manufacture}"/>
+                            <Label Name="lPrice" Content="{Binding Price}"/>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center">
+                            <Label Name="lSale" Content="{Binding Sale}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         
     </Grid>
 </Window>

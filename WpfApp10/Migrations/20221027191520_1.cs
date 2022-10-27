@@ -2,7 +2,7 @@
 
 namespace WpfApp10.Migrations
 {
-    public partial class _1q : Migration
+    public partial class _1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
